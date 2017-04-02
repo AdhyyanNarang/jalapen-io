@@ -1,0 +1,131 @@
+.showcase {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+
+@font-face {
+    font-family: coolSans;
+    src: url("../fonts/Oranienbaum.ttf");
+}
+
+@font-face {
+    font-family: coolTitle;
+    src: url("../fonts/Ailerons-Typeface.otf");
+}
+
+.title {
+	position: absolute;
+	font-size: 6em;
+	top: 5%;
+	left: 40%;
+	font-family: coolTitle;
+	z-index: 10;
+}
+
+.describe {
+	position: absolute;
+	top: 23%;
+	font-size: 2em;
+	font-family: coolTitle;
+	z-index: 10;
+}
+
+.card {
+	display: inline-block;
+	position: relative;
+	margin: 4%;
+	width: 40%;
+}
+
+.icon {
+	position: relative;
+	width: 12%;
+	left: 40%;
+	margin-bottom: 3%;
+}
+
+.head {
+	position: relative;
+	font-size: 2.5em;
+	font-family: coolSans;
+	left: 27%;
+	margin-bottom: 3%;
+}
+
+.content {
+	position: relative;
+	width: 60%;
+	left: 20%;
+	font-size: 1.3em;
+	font-family: coolSans;
+}
+
+.breakdown {
+}
+}
+
+.NavWrapper{
+	border: 1px solid black;
+	height: 100%;
+}
+
+.Navlogo {
+	position: absolute;
+	width: 5%;
+	float: left;
+}
+
+.menu {
+  /* Important for sizing problems when you add/remove the submenus 
+   Make it use 100% of the size of your container */
+  position: absolute;
+  left: 7%;
+  width: 100%;
+  padding: 0;
+}
+
+.menu li {
+  /* I wanted mine horizontal. Feel free to change it to what you want */
+  display:inline-block;
+  /* Float the items to the left, to make sure the disposition does not change when it shows the subitems */
+  float:left;
+  /* The -1px on top and right make it so that our borders end up above one another
+     Not needed it you don't have borders... */
+  margin:-1px -1px 0 0;
+}
+
+.menu li a {
+  display:block;
+  text-decoration:none;
+  border: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+
+  /* Fixed size is also just me. 
+     Not fixing it just make huge boxes when you have submenus */
+  width:100px;
+  height:50px;
+  line-height: 50px;
+}
+
+.menu li > ul {
+/* We hide the submenus by putting them somewhere on the left, with no opacity. */
+  left:-9999px;
+  opacity: 0;
+
+/* We make transitions on opacity */
+  -webkit-transiton: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.menu li:hover > ul {
+/* On hover, we get it back to its basic spot
+  left:0;
+/* And change the opacity to a fully visible one */
+  opacity: 1;
+};
