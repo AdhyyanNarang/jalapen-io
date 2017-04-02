@@ -1,10 +1,62 @@
-.showcase {
+/* Setup Styling to allow percentages to work*/
+
+html { 
+	height: 100%; 
+	width: 100%; 
+	margin: 0px;
+}
+
+body { 
+	height: 100%; 
+	width: 100%; 
+	margin: 0px;
+}
+
+#app { 
+		height: 100%; 
+		width: 100%; 
+		margin: 0;
+}
+
+/* BUTTON STYLING */
+
+.signup-button {
 	position: fixed;
+	width: 8%;
+	left: 90%;
+	top: 87%;
+	color: black;
+	font-family: coolTitle;
+	font-size: 1.2em;
+	font-weight: bold;
+	z-index: 1000;
+}
+
+.cursor {
+	cursor: pointer;
+}
+/* VIDEO STYLING */
+
+.videoFrame {
+	position: absolute;
+	padding: 0;
+	display: block;
 	width: 100%;
 	height: 100%;
 }
 
+.video{
+	position: absolute;
+	padding: 0;
+	display: block;
+	width: 65%;
+	height: 65%;
+	top: 150%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
 
+/* SHOWCASE STYLING */
 @font-face {
     font-family: coolSans;
     src: url("../fonts/Oranienbaum.ttf");
@@ -15,32 +67,74 @@
     src: url("../fonts/Ailerons-Typeface.otf");
 }
 
-.title {
+.showiphone {
 	position: absolute;
-	font-size: 6em;
-	top: 5%;
-	left: 40%;
-	font-family: coolTitle;
-	z-index: 10;
+	display: block;
+	width: 50%;
+	height: 80%;
+	left: 50%;
+	top: 20%;
+	background: #616161;
 }
 
-.describe {
+.iphone {
 	position: absolute;
-	top: 23%;
+	height: 80%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+.showcase {
+	position: absolute;
+	display: block;
+	width: 50%;
+	height: 100%;
+	background: #616161;
+}
+
+
+.title {
+	font-size: 6em;
+	font-family: coolTitle;
+	width: 50%;
+	color: #ECEFF1;
+}
+
+.tagline {
 	font-size: 2em;
 	font-family: coolTitle;
-	z-index: 10;
+	color: #ECEFF1;
+}
+
+.text {
+	position: absolute;
+	left: 10%;
+	width: 80%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+/*IDENTITY STYLING */
+
+.Identity{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50%;
+	border: 1px solid orange;
 }
 
 .card {
-	display: inline-block;
 	position: relative;
+	display: inline-block;
 	margin: 4%;
 	width: 40%;
 }
 
 .icon {
 	position: relative;
+	display: block;
 	width: 12%;
 	left: 40%;
 	margin-bottom: 3%;
@@ -48,6 +142,7 @@
 
 .head {
 	position: relative;
+	display: block;
 	font-size: 2.5em;
 	font-family: coolSans;
 	left: 27%;
@@ -62,70 +157,112 @@
 	font-family: coolSans;
 }
 
-.breakdown {
-}
+
+/* NAVBAR styling */
+
+.navwrapper{
+	position: fixed;
+	width: 100%;
+	height: 20%;
+	background: #616161;
+	z-index: 10000;
 }
 
-.NavWrapper{
-	border: 1px solid black;
-	height: 100%;
-}
-
-.Navlogo {
+.navlogo {
+	display: inline-block;
 	position: absolute;
+	height: 60%;
+	top: 20%;
+	transform: translateY(-50%);
 	width: 5%;
 	float: left;
+	margin-left: 2%;
+	transform: rotateY(180deg);
 }
 
-.menu {
-  /* Important for sizing problems when you add/remove the submenus 
-   Make it use 100% of the size of your container */
-  position: absolute;
-  left: 7%;
-  width: 100%;
-  padding: 0;
+.menuwrapper {
+	position: absolute;
+	display: inline-block;
+	width: 90%;
+	left: 5%;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .menu li {
   /* I wanted mine horizontal. Feel free to change it to what you want */
-  display:inline-block;
-  /* Float the items to the left, to make sure the disposition does not change when it shows the subitems */
-  float:left;
-  /* The -1px on top and right make it so that our borders end up above one another
-     Not needed it you don't have borders... */
-  margin:-1px -1px 0 0;
+  display:inline-block; 
+  float: right;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-style: coolSans;
+  color: black;
+  font-size:1.5em;
 }
 
-.menu li a {
-  display:block;
-  text-decoration:none;
-  border: 1px solid black;
-  vertical-align: middle;
-  text-align: center;
-
-  /* Fixed size is also just me. 
-     Not fixing it just make huge boxes when you have submenus */
-  width:100px;
-  height:50px;
-  line-height: 50px;
+.navbar-item {
+	text-decoration: none;
+	font-family: coolTitle;
+	color: white;
 }
 
-.menu li > ul {
-/* We hide the submenus by putting them somewhere on the left, with no opacity. */
-  left:-9999px;
-  opacity: 0;
+/* TEAMPAGE STYLING */
 
-/* We make transitions on opacity */
-  -webkit-transiton: opacity 0.3s;
-  -moz-transition: opacity 0.3s;
-  -ms-transition: opacity 0.3s;
-  -o-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+.teamBox{
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 80%;
+	top: 200%;
 }
 
-.menu li:hover > ul {
-/* On hover, we get it back to its basic spot
-  left:0;
-/* And change the opacity to a fully visible one */
-  opacity: 1;
-};
+.teamTitle{
+	position: absolute;
+	display: block;
+	font-size: 6em;
+	font-family: coolTitle;
+	height: 20%;
+	width: 40%;
+	left: 50%;
+	top: 20%;
+	transform: translateX(-50%);
+}
+
+.allMembers {
+	position: absolute;
+	width: 90%;
+	height: 60%;
+	top: 70%;
+	left: 63%;
+	transform: translateX(-50%);
+}
+
+.member {
+	display: inline-block;
+	width: 23%;
+	height: 80%;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+.headshot {
+	position: absolute;
+	width: 80%;
+	height: 90%;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 100%;
+	z-index: 100;
+}
+
+.dark {
+	position: absolute;
+	font-family: coolSans;
+	font-size: 1.3em;
+	width: 70%;
+	left: 50%;
+	top: 50%;
+	transform: translate(-30%, -50%);
+
+}

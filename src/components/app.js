@@ -1,13 +1,30 @@
 import React, { Component } from "react";
+import ButtonContainer from './signup';
+
 
 class Home extends Component {
 	render() {
 		return (
 			<div>
 			<ShowCase />
-			<Identity />
+			<ButtonContainer />
+			<Image />
 			</div>
 		)
+	}
+}
+
+
+/* SHOWCASE COMPONENTS */
+
+
+class Image extends Component {
+	render() {
+		return(
+			<div className = "showiphone">
+				<img  src= "../../public/img/iPhone.png" className ="iphone" />
+			</div>
+		);
 	}
 }
 
@@ -15,8 +32,10 @@ class ShowCase extends Component {
   render() {
     return (
       <div className = "showcase">
+      	<div className = "text">
       	<Title name = "HOWL" />
       	<TagLine tag = "The social media app that connects you with people in your location." />
+      	</div>
       </div>
     );
   }
@@ -37,7 +56,7 @@ class TagLine extends Component {
 	render() {
 		var tag = this.props.tag;
 		return (
-			<div className = "describe">
+			<div className = "tagline">
 			{tag}
 			</div>
 		);
@@ -45,6 +64,7 @@ class TagLine extends Component {
 }
 
 
+/*IDENTITIY COMPONENTS */
 class Identity extends Component {
 	render() {
 		var problem = "Current social Media Applications do a great job of helping the user meet new people. However, our team at Howl Believes that they lack the ability to help the users meet new people.";
@@ -53,7 +73,7 @@ class Identity extends Component {
 		var wrongPath = "../public/img/cross.png"; 
 
 		return (
-			<div className = "breakdown">
+			<div className = "Identity">
 			<Facet heading = "The Problem" imagePath = {wrongPath} content = {problem} />
 			<Facet heading = "The Solution" imagePath = {lightPath} content = {solution} />	
 			</div>

@@ -14,9 +14,9 @@ var Finished = React.createClass({
 			 }
 			]
 		return (
-			<div className = "NavWrapper">
-			<div> <img src = "../../public/img/logo.jpg" className= "Navlogo"/> </div>
-			<NavBar items={listOfNavItems} />
+			<div className = "navwrapper">
+			<img src = "../../public/img/logo.png" className= "navlogo"/> 
+			<div className = "menuwrapper"> <NavBar items={listOfNavItems} /> </div>
 			</div>
 		);
 	}
@@ -25,7 +25,7 @@ var Finished = React.createClass({
 var NavBarLink = React.createClass({
 	render:function(){
 		return (
-			<a href = {this.props.url}> {this.props.text} </a>
+			<a className= "navbar-item" href = {this.props.url}> {this.props.text} </a>
 		);
 	}
 })
