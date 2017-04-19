@@ -11,6 +11,18 @@ var Finished = React.createClass({
 			 {
 			  "text": "About",
 			  "url": "../../index.html"
+			 },
+			 {
+			  "text": "Process",
+			  "url": "../../index.html"
+			 },
+			 {
+			  "text": "Team",
+			  "url": "../../index.html"
+			 },
+			 {
+			 	"text" : "Farmer",
+			 	"url" : "https://jalapen-io-dashboard.herokuapp.com/production/index.html"
 			 }
 			]
 		return (
@@ -68,7 +80,6 @@ var NavBar = React.createClass({
     );
   }
 })
-
 
 
 export default Finished;

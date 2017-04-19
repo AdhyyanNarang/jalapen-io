@@ -1,38 +1,22 @@
 $(document).ready(function(){
 
-$('.headshot').hover(function(){
-
-$(this).css('opacity','0.4'); 
-$('dark').css('z-index', '1000');
-},function(){
-
-$(this).css('opacity','1.0');
-
+$('.button').hover(function(){
+	$(this).addClass('cursor');
+	$('.buttonText').addClass('noShow');
+}, function(){
+	$(this).removeClass('cursor');
+	$('.buttonText').removeClass('noShow');
 });
 
-$(".signup-button").click(function() {
-		
-window.location.href = "https://nihar14.typeform.com/to/txNhLP";
-		
-}); 
-
-
-$(".signup-button").hover(function() {
-		
-		$(this).addClass('cursor');
-});
-
-
-$(".signup-icon").click(function() {
-		
-window.location.href = "https://nihar14.typeform.com/to/txNhLP";
-		
-}); 
-
-
-$(".signup-icon").hover(function() {
-		
-		$(this).addClass('cursor');
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+     //>=, not <=
+    if (scroll >= 140) {
+        //clearHeader, not clearheader - caps H
+        $('.navwrapper').addClass('navScroll');
+    } else {
+        $(".navwrapper").removeClass('navScroll');
+    }
 });
 
 });
